@@ -17,7 +17,7 @@ We take the security of Neura seriously. If you believe you have found a securit
 
 **Please do NOT report security vulnerabilities through public GitHub issues.**
 
-Instead, please report them via email to: security@selodev.com
+Instead, please report them via email to: selodev3d@gmail.com
 
 You should receive a response within 48 hours. If for some reason you do not, please follow up via email to ensure we received your original message.
 
@@ -104,10 +104,12 @@ We currently do not have a formal bug bounty program, but we deeply appreciate a
 
 ## Contact
 
-For security concerns, contact: security@selodev.com
-For general support, contact: support@selodev.com
+For security concerns, contact: selodev3d@gmail.com
+For general support, contact: selodev3d@gmail.com
 
-**Created by SELODev** - https://github.com/SELODev
+**Created by SELODev**  
+Website: https://selodev.com  
+GitHub: https://github.com/selodesigns
 
 ## Acknowledgments
 

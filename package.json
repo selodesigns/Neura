@@ -5,11 +5,11 @@
   "author": "SELODev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SELODev/Neura.git"
+    "url": "https://github.com/selodesigns/Neura.git"
   },
-  "homepage": "https://github.com/SELODev/Neura",
+  "homepage": "https://selodev.com",
   "bugs": {
-    "url": "https://github.com/SELODev/Neura/issues"
+    "url": "https://github.com/selodesigns/Neura/issues"
   },
   "type": "module",
   "scripts": {

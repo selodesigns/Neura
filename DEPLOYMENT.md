@@ -73,7 +73,7 @@ sudo systemctl enable mongod
 sudo npm install -g pm2
 
 # Clone and setup project
-git clone https://github.com/SELODev/Neura.git
+git clone https://github.com/selodesigns/Neura.git
 cd Neura
 npm install
 npm run build
@@ -366,8 +366,9 @@ docker-compose up -d
 ## Support
 
 For deployment issues:
-- GitHub Issues: https://github.com/SELODev/Neura/issues
+- Website: https://selodev.com
+- GitHub Issues: https://github.com/selodesigns/Neura/issues
 - Discord: https://discord.gg/selodev
-- Email: support@selodev.com
+- Email: selodev3d@gmail.com
 
-**Created by [SELODev](https://github.com/SELODev)**
+**Created by [SELODev](https://selodev.com)**

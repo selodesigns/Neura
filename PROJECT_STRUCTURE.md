@@ -338,5 +338,5 @@ Need to modify...
 
 ---
 
-**Neura** - Created by [SELODev](https://github.com/SELODev)  
-Repository: https://github.com/SELODev/Neura
+**Neura** - Created by [SELODev](https://selodev.com)  
+Repository: https://github.com/selodesigns/Neura

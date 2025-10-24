@@ -5,24 +5,26 @@
 **Project Name:** Neura  
 **Tagline:** AI-Driven Collaborative Knowledge Explorer  
 **Creator:** SELODev  
-**Repository:** https://github.com/SELODev/Neura
+**Website:** https://selodev.com  
+**Repository:** https://github.com/selodesigns/Neura
 
 ## Official Links
 
 ### GitHub
-- **Repository:** https://github.com/SELODev/Neura
-- **Issues:** https://github.com/SELODev/Neura/issues
-- **Discussions:** https://github.com/SELODev/Neura/discussions
-- **Wiki:** https://github.com/SELODev/Neura/wiki
+- **Repository:** https://github.com/selodesigns/Neura
+- **Issues:** https://github.com/selodesigns/Neura/issues
+- **Discussions:** https://github.com/selodesigns/Neura/discussions
+- **Wiki:** https://github.com/selodesigns/Neura/wiki
 
 ### Community
 - **Discord:** https://discord.gg/selodev
-- **Creator:** https://github.com/SELODev
+- **Website:** https://selodev.com
+- **GitHub Org:** https://github.com/selodesigns
 
 ### Contact
-- **General Support:** support@selodev.com
-- **Security Issues:** security@selodev.com
-- **Contributions:** contribute@selodev.com
+- **General Support:** selodev3d@gmail.com
+- **Security Issues:** selodev3d@gmail.com
+- **Contributions:** selodev3d@gmail.com
 
 ## Brand Colors
 
@@ -91,7 +93,7 @@ primary-900: #0c4a6e
 ✅ "Neura by SELODev"  
 ✅ "Neura - AI Knowledge Explorer"  
 ✅ "Created by SELODev"  
-✅ "Built with ❤️ by SELODev"
+✅ "Built with ❤️ by [SELODev](https://selodev.com)"
 
 ### Incorrect Usage
 ❌ "neura" (always capitalize)  
@@ -107,7 +109,8 @@ All code files should include appropriate attribution where needed:
 /**
  * Neura - AI-Driven Collaborative Knowledge Explorer
  * Created by SELODev
- * https://github.com/SELODev/Neura
+ * https://selodev.com
+ * https://github.com/selodesigns/Neura
  */
 ```
 
@@ -118,7 +121,8 @@ All major documentation files should end with:
 ```markdown
 ---
 
-**Neura** - Created by [SELODev](https://github.com/SELODev)
+**Neura** - Created by [SELODev](https://selodev.com)  
+GitHub: https://github.com/selodesigns/Neura
 ```
 
 Or the variant:
@@ -126,7 +130,8 @@ Or the variant:
 ```markdown
 ---
 
-**Built with ❤️ by [SELODev](https://github.com/SELODev)**
+**Built with ❤️ by [SELODev](https://selodev.com)**  
+GitHub: https://github.com/selodesigns
 ```
 
 ## Social Media
@@ -138,7 +143,8 @@ Or the variant:
 - #SELODev
 
 ### Mentions
-- GitHub: @SELODev
+- GitHub: @selodesigns
+- Website: selodev.com
 - When sharing: Always credit SELODev
 
 ## Legal
@@ -181,15 +187,15 @@ neura-knowledge-explorer
 
 ### File Naming
 - Repository name: `Neura` (capitalized)
-- Package name: `neura-knowledge-explorer` (lowercase with hyphens)
-- Docker image: `selodev/neura`
-- NPM scope (if published): `@selodev/neura`
+- **Package Name:** neura-knowledge-explorer
+- **NPM Scope (if published):** @selodesigns/neura
+- **Docker Image (if published):** selodesigns/neura
 
 ## Support & Contact
 
 For brand/marketing inquiries:
-- Email: support@selodev.com
-- GitHub: https://github.com/SELODev
+- Email: selodev3d@gmail.com
+- GitHub: https://github.com/selodesigns
 
 ---
 

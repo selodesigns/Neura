@@ -19,7 +19,9 @@ Your Neura application includes:
 ### 🛠️ Technical Stack
 - **Frontend**: React 18 + Vite + Tailwind CSS + ProseMirror
 - **Backend**: Node.js + Express + MongoDB + Socket.IO
-- **AI**: OpenAI GPT-4 integration
+- **AI Provider (choose one):**
+  - OpenAI API key (cloud-based, requires subscription)
+  - OR Ollama (free, local, private) - [Setup Guide](OLLAMA_SETUP.md)
 - **Real-Time**: Yjs CRDT + WebSocket
 - **Deployment**: Docker, PM2, and cloud-ready
 
@@ -50,13 +52,30 @@ cp .env.example .env
 ```
 
 Edit `.env` with your settings:
+
+**Option A: OpenAI (Cloud)**
 ```env
+LLM_PROVIDER=openai
 OPENAI_API_KEY=sk-your-openai-api-key-here
+OPENAI_MODEL=gpt-4-turbo-preview
 MONGODB_URI=mongodb://localhost:27017/neura
 JWT_SECRET=create-a-secure-secret-key-minimum-32-characters
 PORT=4000
 CLIENT_URL=http://localhost:5555
 ```
+
+**Option B: Ollama (Local - Free & Private!)**
+```env
+LLM_PROVIDER=ollama
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=llama2
+MONGODB_URI=mongodb://localhost:27017/neura
+JWT_SECRET=create-a-secure-secret-key-minimum-32-characters
+PORT=4000
+CLIENT_URL=http://localhost:5555
+```
+
+📖 **Using Ollama?** Follow [OLLAMA_SETUP.md](OLLAMA_SETUP.md) for installation and model setup
 
 ### Step 3: Start MongoDB
 ```bash
@@ -308,10 +327,11 @@ PORT=5000
 - JSDoc comments on key functions
 
 ### Community
-- GitHub Issues: https://github.com/SELODev/Neura/issues
-- GitHub Discussions: https://github.com/SELODev/Neura/discussions
+- Website: https://selodev.com
+- GitHub Issues: https://github.com/selodesigns/Neura/issues
+- GitHub Discussions: https://github.com/selodesigns/Neura/discussions
 - Discord: https://discord.gg/selodev
-- Email: support@selodev.com
+- Email: selodev3d@gmail.com
 
 ### Debugging
 - Frontend: Browser DevTools Console
@@ -338,6 +358,7 @@ Your Neura Knowledge Explorer is fully set up and ready to use.
 
 **Built with ❤️ by [SELODev](https://selodev.com)**
 
-Neura - AI-Driven Collaborative Knowledge Explorer
+Neura - AI-Driven Collaborative Knowledge Explorer  
+GitHub: https://github.com/selodesigns/Neura
 
 Happy exploring! 🚀✨

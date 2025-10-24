@@ -9,9 +9,10 @@
 🤝 Seamless collaboration with CRDT
 📊 Built-in analytics
 
-Built with React, Node.js & OpenAI by @SELODev
+Built with React, Node.js & OpenAI by @selodesigns
 
-🔗 github.com/SELODev/Neura
+🌐 selodev.com
+🔗 github.com/selodesigns/Neura
 
 #AI #OpenSource #Collaboration
 
@@ -37,7 +38,8 @@ Built with React, Node.js, MongoDB, and OpenAI GPT-4.
 
 Open source & MIT licensed. Created by SELODev.
 
-🔗 github.com/SELODev/Neura
+🌐 selodev.com
+🔗 github.com/selodesigns/Neura
 
 #AI #Collaboration #KnowledgeManagement #OpenSource #React #NodeJS
 
@@ -116,13 +118,16 @@ Visit the repository for full documentation, deployment guides, and contribution
 
 Neura represents a new approach to knowledge exploration - one that combines AI's analytical power with human collaboration to create something greater than the sum of its parts.
 
-**Repository:** https://github.com/SELODev/Neura  
+**Website:** https://selodev.com  
+**Repository:** https://github.com/selodesigns/Neura  
 **Discord:** https://discord.gg/selodev  
-**Support:** support@selodev.com
+**Support:** selodev3d@gmail.com
 
 ---
 
-**Built with ❤️ by SELODev**
+**Built with ❤️ by SELODev**  
+Website: https://selodev.com  
+GitHub: https://github.com/selodesigns
 
 #AI #OpenSource #Collaboration #KnowledgeManagement #React #NodeJS #OpenAI #GPT4 #CRDT #RealTime
 
@@ -132,7 +137,7 @@ Neura represents a new approach to knowledge exploration - one that combines AI'
 
 ### Primary Hashtags (Always use)
 ```
-#Neura #SELODev #AIKnowledge
+#Neura #SELODev #AIKnowledge #selodesigns
 ```
 
 ### Technology Hashtags
@@ -189,9 +194,10 @@ Neura represents a new approach to knowledge exploration - one that combines AI'
 ## Call-to-Action Options
 
 **For GitHub:**
-- ⭐ Star the repo: github.com/SELODev/Neura
+- ⭐ Star the repo: github.com/selodesigns/Neura
 - 🔱 Fork and contribute
 - 📖 Read the docs
+- 🌐 Visit: selodev.com
 
 **For Community:**
 - 💬 Join our Discord: discord.gg/selodev

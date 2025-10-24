@@ -1,7 +1,8 @@
-import { openai, MODEL } from '../config/openai.js';
+import { llmProvider } from '../config/llm.js';
 
 /**
  * AI Research Agent - Orchestrates multi-perspective research queries
+ * Supports both OpenAI and Ollama (local LLMs)
  */
 class AIResearchAgent {
   constructor() {
@@ -29,14 +30,12 @@ Generate 3 alternative formulations that explore different angles:
 Return only the questions, one per line.`;
 
     try {
-      const response = await openai.chat.completions.create({
-        model: MODEL,
-        messages: [{ role: 'user', content: prompt }],
-        temperature: 0.8,
-        max_tokens: 300,
-      });
+      const response = await llmProvider.chat(
+        [{ role: 'user', content: prompt }],
+        { temperature: 0.8, max_tokens: 300 }
+      );
 
-      const variations = response.choices[0].message.content
+      const variations = response.content
         .split('\n')
         .filter(line => line.trim())
         .map(line => line.replace(/^\d+\.\s*/, '').trim());
@@ -64,20 +63,18 @@ Return only the questions, one per line.`;
     const systemPrompt = `You are an expert researcher. ${perspectivePrompts[perspective]} Provide insightful, well-researched information.`;
 
     try {
-      const response = await openai.chat.completions.create({
-        model: MODEL,
-        messages: [
+      const response = await llmProvider.chat(
+        [
           { role: 'system', content: systemPrompt },
           { role: 'user', content: query },
         ],
-        temperature: 0.7,
-        max_tokens: 800,
-      });
+        { temperature: 0.7, max_tokens: 800 }
+      );
 
       return {
         perspective,
-        content: response.choices[0].message.content,
-        tokens: response.usage.total_tokens,
+        content: response.content,
+        tokens: response.tokens,
       };
     } catch (error) {
       console.error(`Error getting ${perspective} response:`, error);
@@ -133,14 +130,12 @@ Create a comprehensive synthesis that:
 Keep it concise but thorough (max 400 words).`;
 
     try {
-      const response = await openai.chat.completions.create({
-        model: MODEL,
-        messages: [{ role: 'user', content: synthesisPrompt }],
-        temperature: 0.6,
-        max_tokens: 600,
-      });
+      const response = await llmProvider.chat(
+        [{ role: 'user', content: synthesisPrompt }],
+        { temperature: 0.6, max_tokens: 600 }
+      );
 
-      return response.choices[0].message.content;
+      return response.content;
     } catch (error) {
       console.error('Error synthesizing responses:', error);
       return 'Error generating synthesis.';
@@ -159,14 +154,12 @@ The user is at position: "${cursorPosition}"
 Suggest 3 brief, relevant continuations or improvements (each max 50 words).`;
 
     try {
-      const response = await openai.chat.completions.create({
-        model: MODEL,
-        messages: [{ role: 'user', content: prompt }],
-        temperature: 0.7,
-        max_tokens: 300,
-      });
+      const response = await llmProvider.chat(
+        [{ role: 'user', content: prompt }],
+        { temperature: 0.7, max_tokens: 300 }
+      );
 
-      return response.choices[0].message.content.split('\n').filter(s => s.trim());
+      return response.content.split('\n').filter(s => s.trim());
     } catch (error) {
       console.error('Error generating suggestions:', error);
       return [];
@@ -184,14 +177,12 @@ Suggest 3 brief, relevant continuations or improvements (each max 50 words).`;
     };
 
     try {
-      const response = await openai.chat.completions.create({
-        model: MODEL,
-        messages: [{ role: 'user', content: prompts[direction] }],
-        temperature: 0.7,
-        max_tokens: 500,
-      });
+      const response = await llmProvider.chat(
+        [{ role: 'user', content: prompts[direction] }],
+        { temperature: 0.7, max_tokens: 500 }
+      );
 
-      return response.choices[0].message.content;
+      return response.content;
     } catch (error) {
       console.error('Error expanding section:', error);
       return text;

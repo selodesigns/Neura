@@ -45,8 +45,21 @@ app.use('/api/ai', authMiddleware, aiRoutes);
 app.use('/api/analytics', authMiddleware, analyticsRoutes);
 
 // Health check
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+app.get('/api/health', async (req, res) => {
+  const { llmProvider } = await import('./config/llm.js');
+  const llmHealth = await llmProvider.checkHealth();
+  const llmInfo = llmProvider.getInfo();
+  
+  res.json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    llm: {
+      provider: llmInfo.provider,
+      model: llmInfo.model,
+      available: llmHealth.available,
+      error: llmHealth.error,
+    },
+  });
 });
 
 // WebSocket setup

@@ -96,4 +96,5 @@ Please adhere to this project's [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ---
 
-**Neura** - Created by [SELODev](https://github.com/SELODev)
+**Neura** - Created by [SELODev](https://selodev.com)  
+GitHub: https://github.com/selodesigns/Neura

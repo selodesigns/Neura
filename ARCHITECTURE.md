@@ -158,6 +158,34 @@ Return Structured Results
 - Token limits for response length control
 - Context injection for document-aware suggestions
 
+### LLM Provider Abstraction (`server/config/llm.js`)
+
+**Purpose:** Unified interface for multiple LLM providers
+
+**Supported Providers:**
+- **OpenAI** - Cloud-based GPT-4/GPT-3.5 (requires API key)
+- **Ollama** - Local LLMs (Llama2, Mistral, etc.) - Free and private
+
+**Key Features:**
+- Provider-agnostic API (same interface for all providers)
+- Automatic provider detection from environment
+- Health checking for both providers
+- Message format conversion for Ollama compatibility
+- Error handling with helpful messages
+
+**Configuration:**
+```javascript
+LLM_PROVIDER=openai  // or 'ollama'
+OPENAI_MODEL=gpt-4-turbo-preview
+OLLAMA_MODEL=llama2
+```
+
+**Benefits:**
+- Easy switching between cloud and local AI
+- No code changes needed to switch providers
+- Privacy option with Ollama (all data stays local)
+- Cost savings option (Ollama is free)
+
 ### Database Schema
 
 #### User Collection
@@ -372,4 +400,5 @@ This architecture supports current features and provides foundation for future e
 ---
 
 **Neura** - AI-Driven Collaborative Knowledge Explorer  
-Created by [SELODev](https://github.com/SELODev)
+Created by [SELODev](https://selodev.com)  
+GitHub: https://github.com/selodesigns/Neura

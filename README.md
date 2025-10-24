@@ -6,8 +6,18 @@ An advanced AI-powered collaborative knowledge exploration tool that combines mu
 
 ## 🌟 Features
 
-### Core Features
-- **AI-Powered Multi-Perspective Research**: Explore topics from analytical, creative, critical, historical, practical, and theoretical perspectives
+### ✨ Key Features
+
+### 🧠 AI-Powered Research (OpenAI or Local with Ollama)
+
+**Flexible AI Backend:**
+- Use **OpenAI GPT-4** for cloud-based AI
+- Or use **Ollama** for completely local, private AI
+- Switch between providers easily
+- See [comparison guide](docs/OLLAMA_COMPARISON.md)
+
+### 📝 Core Features
+- **Multi-Perspective Research**: Explore topics from analytical, creative, critical, historical, practical, and theoretical perspectives
 - **Real-Time Collaborative Editing**: Built with Yjs and ProseMirror for seamless multi-user collaboration
 - **Markdown Support**: Full markdown editing with live preview and syntax highlighting
 - **Version Control**: Track changes and maintain version history for all documents
@@ -58,13 +68,15 @@ An advanced AI-powered collaborative knowledge exploration tool that combines mu
 ### Prerequisites
 - Node.js 18+ 
 - MongoDB 4.4+
-- OpenAI API Key
+- **AI Provider (choose one):**
+  - OpenAI API Key (cloud)
+  - OR Ollama installed (local) - See [OLLAMA_SETUP.md](OLLAMA_SETUP.md)
 
 ### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/SELODev/Neura.git
+   git clone https://github.com/selodesigns/Neura.git
    cd Neura
    ```
 
@@ -79,13 +91,30 @@ An advanced AI-powered collaborative knowledge exploration tool that combines mu
    ```
    
    Edit `.env` and configure:
+   
+   **Option A: Using OpenAI (Cloud)**
    ```env
+   LLM_PROVIDER=openai
    OPENAI_API_KEY=your_openai_api_key
+   OPENAI_MODEL=gpt-4-turbo-preview
    MONGODB_URI=mongodb://localhost:27017/neura
    JWT_SECRET=your_secure_secret_key
    PORT=4000
    CLIENT_URL=http://localhost:5555
    ```
+   
+   **Option B: Using Ollama (Local)**
+   ```env
+   LLM_PROVIDER=ollama
+   OLLAMA_BASE_URL=http://localhost:11434
+   OLLAMA_MODEL=llama2
+   MONGODB_URI=mongodb://localhost:27017/neura
+   JWT_SECRET=your_secure_secret_key
+   PORT=4000
+   CLIENT_URL=http://localhost:5555
+   ```
+   
+   📖 See [OLLAMA_SETUP.md](OLLAMA_SETUP.md) for detailed Ollama setup
 
 4. **Start MongoDB**
    ```bash
@@ -311,11 +340,13 @@ MIT License - see LICENSE file for details
 
 ## 📧 Support
 
-- Issues: [GitHub Issues](https://github.com/SELODev/Neura/issues)
-- Documentation: [Wiki](https://github.com/SELODev/Neura/wiki)
+- Website: [selodev.com](https://selodev.com)
+- Issues: [GitHub Issues](https://github.com/selodesigns/Neura/issues)
+- Documentation: [Wiki](https://github.com/selodesigns/Neura/wiki)
 - Discord: [SELODev Community](https://discord.gg/selodev)
-- Email: support@selodev.com
+- Email: selodev3d@gmail.com
 
 ---
 
-**Built with ❤️ by [SELODev](https://github.com/SELODev) for collaborative knowledge exploration**
+**Built with ❤️ by [SELODev](https://selodev.com) for collaborative knowledge exploration**  
+GitHub: [github.com/selodesigns](https://github.com/selodesigns)

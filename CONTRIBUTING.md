@@ -10,7 +10,7 @@ Thank you for your interest in contributing to Neura! This document provides gui
 
 ## Getting Started
 
-1. Fork the repository
+1. Fork the repository from https://github.com/selodesigns/Neura
 2. Clone your fork: `git clone https://github.com/your-username/Neura.git`
 3. Create a branch: `git checkout -b feature/your-feature-name`
 4. Make your changes
@@ -80,8 +80,9 @@ Example: `feat: add multi-language support to AI research`
 
 ## Questions?
 
-- Open a GitHub Discussion: https://github.com/SELODev/Neura/discussions
+- Visit: https://selodev.com
+- Open a GitHub Discussion: https://github.com/selodesigns/Neura/discussions
 - Join our Discord community: https://discord.gg/selodev
-- Email: contribute@selodev.com
+- Email: selodev3d@gmail.com
 
 Thank you for contributing! 🎉

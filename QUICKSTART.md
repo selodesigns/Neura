@@ -6,14 +6,16 @@ Get Neura up and running in 5 minutes!
 
 - Node.js 18 or higher
 - MongoDB 4.4 or higher
-- OpenAI API key
+- **AI Provider (choose one):**
+  - OpenAI API key (cloud)
+  - OR Ollama (local) - [Setup Guide](OLLAMA_SETUP.md)
 
 ## Installation Steps
 
 ### 1. Clone and Install
 
 ```bash
-git clone https://github.com/SELODev/Neura.git
+git clone https://github.com/selodesigns/Neura.git
 cd Neura
 npm install
 ```
@@ -26,13 +28,29 @@ cp .env.example .env
 
 Edit `.env` with your configuration:
 
+**Using OpenAI (Cloud):**
 ```env
+LLM_PROVIDER=openai
 OPENAI_API_KEY=sk-your-key-here
+OPENAI_MODEL=gpt-4-turbo-preview
 MONGODB_URI=mongodb://localhost:27017/neura
 JWT_SECRET=your-secret-key-minimum-32-characters
 PORT=4000
 CLIENT_URL=http://localhost:5555
 ```
+
+**Using Ollama (Local - No API Key Needed!):**
+```env
+LLM_PROVIDER=ollama
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=llama2
+MONGODB_URI=mongodb://localhost:27017/neura
+JWT_SECRET=your-secret-key-minimum-32-characters
+PORT=4000
+CLIENT_URL=http://localhost:5555
+```
+
+> 💡 **New to Ollama?** See [OLLAMA_SETUP.md](OLLAMA_SETUP.md) for complete setup instructions
 
 ### 3. Start MongoDB
 
@@ -164,11 +182,12 @@ PORT=5000
 
 ## Need Help?
 
-- 💬 [GitHub Discussions](https://github.com/SELODev/Neura/discussions)
-- 🐛 [GitHub Issues](https://github.com/SELODev/Neura/issues)
+- 🌐 [Website](https://selodev.com)
+- 💬 [GitHub Discussions](https://github.com/selodesigns/Neura/discussions)
+- 🐛 [GitHub Issues](https://github.com/selodesigns/Neura/issues)
 - 💬 [Discord Community](https://discord.gg/selodev)
-- 📧 support@selodev.com
+- 📧 selodev3d@gmail.com
 
-**Created by [SELODev](https://github.com/SELODev)**
+**Created by [SELODev](https://selodev.com)**
 
 Happy exploring! 🚀
