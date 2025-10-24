@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:6.0
+    container_name: neura-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: neura
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - neura-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: neura-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    networks:
+      - neura-network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: neura-app
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://mongodb:27017/neura
+      - JWT_SECRET=${JWT_SECRET}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4-turbo-preview}
+      - PORT=4000
+      - CLIENT_URL=${CLIENT_URL:-http://localhost:5555}
+    depends_on:
+      - mongodb
+      - redis
+    networks:
+      - neura-network
+    volumes:
+      - ./logs:/app/logs
+
+networks:
+  neura-network:
+    driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local
